@@ -32,4 +32,13 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Sh
-                    command: echo "hello world 2"
+                    command: echo "hello world 3"
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: shashifirstdocker
+                    repo: shashi_repo
+                    tags:
+                      - t1
