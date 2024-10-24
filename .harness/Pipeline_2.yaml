@@ -1,0 +1,35 @@
+pipeline:
+  name: Pipeline 2
+  identifier: Pipeline_2
+  projectIdentifier: firstdemo
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: Myrepo
+        repoName: harness_jhttp_fork
+        build: <+input>
+  stages:
+    - stage:
+        name: Build1
+        identifier: Build1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Windows
+            arch: Arm64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo "hello world 2"
