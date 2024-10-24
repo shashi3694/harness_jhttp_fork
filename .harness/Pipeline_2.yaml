@@ -42,3 +42,10 @@ pipeline:
                     repo: shashi_repo
                     tags:
                       - t1
+                    buildArgs:
+                      b: "123"
+          caching:
+            enabled: true
+            paths: []
+          buildIntelligence:
+            enabled: false
