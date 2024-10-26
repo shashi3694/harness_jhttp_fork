@@ -44,6 +44,7 @@ pipeline:
                       - t1
                     buildArgs:
                       b: "123"
+                    target: /bin/
           caching:
             enabled: true
             paths: []
